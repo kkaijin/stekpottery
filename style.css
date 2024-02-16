@@ -7,3 +7,10 @@
 body{
     background-color: green;
 }
+main{
+    width: 1200px;
+    margin: 0px auto;
+    background-color: blue;
+    height: 900px;
+
+}
