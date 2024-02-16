@@ -7,8 +7,15 @@
 body{
     background-color: green;
 }
+
 header{
     height: 100px;
     background-color: red;
     
+}
+main{
+    width: 1200px;
+    margin: 0px auto;
+    background-color: blue;
+    height: 900px;
 }
