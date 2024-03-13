@@ -5,17 +5,22 @@
 }
 
 body{
-    background-color: green;
+    background-color: #60B9CE;
 }
 
 header{
-    height: 100px;
-    background-color: red;
+    
     
 }
-main{
-    width: 1200px;
-    margin: 0px auto;
-    background-color: blue;
-    height: 900px;
+
+.container{
+    max-width: 1700px;
+    background-color: red;
+    margin-inline: 20px;
+}
+
+@media screen and (min-width: 1700px) {
+    .container{
+       margin-inline: auto;
+    }
 }
