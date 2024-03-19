@@ -1,0 +1,26 @@
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+
+body{
+    background-color: #60B9CE;
+}
+
+header{
+    
+    
+}
+
+.container{
+    max-width: 1700px;
+    background-color: red;
+    margin-inline: 20px;
+}
+
+@media screen and (min-width: 1700px) {
+    .container{
+       margin-inline: auto;
+    }
+}
