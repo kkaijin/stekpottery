@@ -4,10 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Document</title>
 </head>
 <body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <img src="assets/img/logo.svg" alt="image">
+            </a>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">О нас</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Отзывы</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Работы учеников</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Наши услуги</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Контакты</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Записаться</a>
+                    </li>
+                </ul>
+
+                <!-- Close button -->
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+
+                
+            </div>
+
+            <!-- Toggle button -->
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-apps-2-fill"></i>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
    
     <header>
        <nav class="container"></nav>
@@ -18,6 +74,38 @@
         <section class="aboutus"></section>
         <section class="reviews">asdsad</section>
         <section class="studentswork">
+            
+            <div class="home__data">
+                <h1 class="home__title">
+                   Работы учеников
+                </h1>
+             </div>
+
+             <div class="home__images">
+                <div class="home__circle"></div>
+
+                <div class="home__swiper swiper">
+                   <div class="swiper-wrapper">
+                      <article class="home__article swiper-slide">
+                         <img src="assets/img/studentswork1.svg" alt="image" class="home__shoe">
+                      </article>
+
+                      <article class="home__article swiper-slide">
+                         <img src="assets/img/studentswork2.svg" alt="image" class="home__shoe">
+                      </article>
+
+                      <article class="home__article swiper-slide">
+                         <img src="assets/img/studentswork3.svg" alt="image" class="home__shoe">
+                      </article>
+                   </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="swiper-pagination "></div>
+             </div>
+        </section>
+            
+        <section class="oursevices">
             <div class="wrap">
                 <div class="card">
                     <div class="front">
@@ -108,14 +196,22 @@
                 
             </div>
         </section>
-        <section class="oursevices">
-            
-        </section>
         <section class="register"></section>
     </main>
 
     <footer>
+
+
+    </footer>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+
         
     </footer>
+
 </body>
 </html>

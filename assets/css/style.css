@@ -1,0 +1,311 @@
+/*=============== VARIABLES CSS ===============*/
+:root {
+    --header-height: 3.5rem;
+  
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --black-color: hsl(0, 0%, 5%);
+    --black-color-light: hsl(0, 0%, 70%);
+    --white-color: hsl(0, 0%, 100%);
+    --title-color: hsl(0, 0%, 5%);
+    --text-color: hsl(0, 0%, 55%);
+    --body-color: hsl(0, 0%, 96%);
+    --clr-light: white;
+    --clr-card-front: #015367;
+  
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --body-font: "Poppins", sans-serif;
+    --second-font: "Syncopate", sans-serif;
+    --biggest-font-size: 2.5rem;
+    --h2-font-size: 1.25rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+  
+    /*========== Font weight ==========*/
+    --font-regular: 400;
+    --font-bold: 700;
+  
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    
+  }
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+
+
+ul {
+    list-style: none;
+  }
+  
+a {
+text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+body{
+    background-color: green;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+/* header{
+    height: 100px;
+    background-color: red;
+    
+} */
+main{
+    width: 1200px;
+    margin: 0px auto;
+    background-color: white;
+    height: 900px;
+}
+.container{
+    max-width: 1700px;
+    background-color: white;
+    margin-inline: 20px;
+}
+/*=============== HEADER & NAV ===============*/
+.header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 100;
+    transition: box-shadow .4s;
+  }
+  
+  .nav{
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .nav__logo img{
+    width: 5rem;
+  }
+  
+  .nav__toggle,
+  .nav__close{
+    display: flex;
+    font-size: 1.25rem;
+    cursor: pointer;
+  }
+  /* students works */
+  .home__title{
+    font-size: var(--biggest-font-size);
+    margin-bottom: 1rem;
+  }
+
+  .home__images{
+    display: grid;
+    position: relative;
+    
+  }
+  
+  .home__shoe{
+    width: 300px;
+    margin-inline: auto;
+  }
+  
+  .home__circle{
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(180deg,
+                hsl(0, 0%, 100%),
+                hsl(0, 0%, 96%));
+    border-radius: 50%;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+  }
+  /* Swiper class */
+  .swiper{
+    margin-inline: initial;
+  }
+  
+  .swiper-pagination-bullets.swiper-pagination-horizontal{
+    bottom: -2rem;
+  }
+  
+  .swiper-pagination-bullet{
+    width: 1rem;
+    height: .25rem;
+    border-radius: 1rem;
+    background-color: var(--black-color-light);
+    opacity: 1;
+    transition: background-color .3s, width .3s;
+  }
+  
+  .swiper-pagination-bullet-active{
+    width: 1.25rem;
+    background-color: var(--black-color);
+  }
+  
+  .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+    margin: 0 2px;
+  }
+
+  .home__swiper{
+    justify-content: center;
+  }
+  .wrap{
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:1em;
+  }
+  .card{
+    border-radius: 15px;
+   width: 300px;
+   height: 300px;
+   border: 6px dashed black;
+   position: relative;
+   perspective: 1000px;
+   
+   
+
+  }
+  .front, .back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
+    backface-visibility: hidden;
+    border-radius:1em ;
+  }
+  .front{
+    color: var(--clr-light);
+    font-weight: 700;
+    background-color: var(--clr-card-front);
+
+  }
+  .back{
+    color: var(--clr-light);
+    font-weight: 700;
+    background-color: black;
+    transform: rotateY(180deg);
+  }
+  .card:hover .front{transform: rotateY(180deg);}
+  .card:hover .back{transform: rotateY(360deg);}
+
+/* Navigation for mobile devices */
+@media screen and (max-width: 1023px) {
+    .nav__menu{
+      position: fixed;
+      top: 0;
+      right: -100%;
+      background-color: var(--body-color);
+      box-shadow: -1px 0 16px grey;
+      width: 70%;
+      height: 100%;
+      padding: 6rem 3rem;
+      transition: right .4s;
+    }
+  }
+
+  
+  .nav__list{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.5rem;
+  }
+  
+  .nav__link{
+    color: var(--title-color);
+    font-family: var(--second-font);
+  }
+  
+  .nav__close{
+    position: absolute;
+    top: 1.125rem;
+    right: 1.5rem;
+  }
+
+  .nav__logo{
+    /* background-color: aquamarine; */
+    align-self: start;
+  }
+
+  /* Show menu */
+.show-menu{
+    right: 0;
+  }
+
+  .home__swiper{
+    justify-content: s;
+  }
+
+  @media screen and (min-width: 1023px){
+    .nav__list{
+        flex-direction: row;
+        column-gap: 5rem;
+        align-items: center;
+        
+      }
+
+      .nav__toggle,
+      .nav__close{
+        display: none;
+      }
+
+      .nav__logo{
+        /* background-color: aquamarine; */
+        align-self: start;
+      }
+      
+      .nav{
+        /* background-color: bisque; */
+        
+      }
+}
+
+@media screen and (min-width: 1700px){
+    .container{
+        margin-inline: auto;
+    }
+    .nav__list{
+        flex-direction: row;
+        column-gap: 5rem;
+        align-items: center;
+        
+      }
+
+      .nav__toggle,
+      .nav__close{
+        display: none;
+      }
+
+      .nav__logo{
+        /* background-color: aquamarine; */
+        align-self: start;
+      }
+      
+      .nav{
+        /* background-color: bisque; */
+        
+      }
+}

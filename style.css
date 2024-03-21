@@ -9,10 +9,6 @@
 
 }
 
-body{
-    background-color: #60B9CE;
-}
-
 header{
     
     
@@ -30,7 +26,6 @@ header{
     }
 }
 .wrap{
-    position: absolute;
     height: 100%;
     width: 100%;
     left: 0;
