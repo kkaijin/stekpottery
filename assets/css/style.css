@@ -259,7 +259,7 @@ align-self: start;
 
 /*начиная от 1023пкс*/
 @media screen and (min-width: 1023px){
-
+  
     .nav__list{
         flex-direction: row;
         column-gap: 5rem;
