@@ -1,3 +1,8 @@
+:root{
+    --clr-light: white;
+    --clr-card-front: #015367;
+
+}
 *{
     margin: 0px;
     padding: 0px;
@@ -23,4 +28,56 @@ header{
     .container{
        margin-inline: auto;
     }
+}
+.wrap{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:1em;
+}
+.card{
+    border-radius: 15px;
+   width: 300px;
+   height: 300px;
+   border: 6px dashed black;
+   position: relative;
+   perspective: 1000px;
+   
+   
+
+}
+.front, .back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
+    backface-visibility: hidden;
+    border-radius:1em ;
+}
+.front{
+    color: var(--clr-light);
+    font-weight: 700;
+    background-color: var(--clr-card-front);
+
+}
+.back{
+    color: var(--clr-light);
+    font-weight: 700;
+    background-color: black;
+    transform: rotateY(180deg);
+}
+.card:hover .front{transform: rotateY(180deg);}
+.card:hover .back{transform: rotateY(360deg);}
+.card-content{
 }
