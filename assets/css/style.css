@@ -10,6 +10,7 @@
     --title-color: hsl(0, 0%, 5%);
     --text-color: hsl(0, 0%, 55%);
     --body-color: #60B9CE;
+    --second-body-color: #FF9F40;
     --clr-light: white;
     --clr-card-front: #015367;
   
@@ -57,7 +58,7 @@ body{
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
     background-color: var(--body-color);
-    color: var(--text-color);
+    
 }
 
 main{
@@ -144,7 +145,7 @@ align-self: start;
 /* big sections */
   .home__title{
     font-size: var(--biggest-font-size);
-    margin-bottom: 1rem;
+    text-align: center;
   }
   
   .studentswork{
@@ -162,7 +163,24 @@ align-self: start;
   background-image: url(../img/small-banner.svg);
   height: 1025px;
   background-size: contain;
+  border-radius: 50px;
+  border: none;
+  justify-content: start;
+  align-items: center;
+  display: flex;
+  
+  
+
 }
+/* О нас */
+.aboutus{
+  margin-top: 10%;
+}
+/* reviews */
+
+  .reviews{
+    margin-top: 10%;
+  }
 
 /*Слайдер работ учеников */
 .swiper{
@@ -193,6 +211,11 @@ align-self: start;
 
 .home__swiper{
   justify-content: center;
+}
+.home__images{
+  max-width: 30rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -247,37 +270,117 @@ align-self: start;
 .card:hover .front{transform: rotateY(180deg);}
 .card:hover .back{transform: rotateY(360deg);}
 
-/*начиная от 428пкс*/
-@media screen and (min-width: 428px){ 
+.title_text{
+  font-size: 64px;
+  color: white;
+  text-align: center;
+  margin-left: 30px;
+  
+  
+}
+
+/*начиная от 390пкс*/
+@media screen and (min-width: 390px){ 
   .banner{
     background-image: url(../img/big-banner.svg);
     height: 500px;
     background-size: cover;
     background-position: center;
   }
+
+  /* О нас */
+  .aboutus{
+    background-color: var(--second-body-color);
+  }
+  .about__div{
+    margin-inline: 20px;
+    padding-bottom: 10px;
+  }
+  
+  .about__img{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about__text{
+    margin-inline: 20px;
+    font-weight: bolder;
+    background-color: var(--second-body-color);
+  }
+  .title_text{
+    font-size: 64px;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    
+    
+  }
 }
 
 /*начиная от 1023пкс*/
 @media screen and (min-width: 1023px){
-    .home__images{
+
+  .home__images{
       display: flex;
-    }
-    .nav__list{
+  }
+  .nav__list{
         flex-direction: row;
         column-gap: 5rem;
         align-items: center;  
-      }
+  }
 
-      .nav__toggle,
-      .nav__close{
-        display: none;
-      }
+    .nav__toggle,
+    .nav__close{
+      display: none;
+  }
 
-      .nav__logo{
-        /* background-color: aquamarine; */
-        align-self: start;
-      }
-      
+    .nav__logo{
+      /* background-color: aquamarine; */
+      align-self: start;
+  }
+  
+  /* о нас */
+  .aboutus{
+    background-color: var(--second-body-color);
+    max-width: 100rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+  }
+
+  .about__parentdiv{
+    background-color: var(--second-body-color);
+    display: flex;
+    max-width: 100rem;
+    max-height: 100rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about__div{
+    margin-inline: 20px;
+    padding-bottom: 10px;
+    
+  }
+  
+  .about__img{
+    size: 1%;
+  }
+  
+  .about__text{
+    max-width: 40rem;
+    font-weight: bolder;
+    font-size: 1rem;
+  }
+
+  .about__vases{
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
     
 }
 
@@ -295,16 +398,16 @@ align-self: start;
 
     .nav__toggle,
       .nav__close{
-        display: none;
+      display: none;
     }
 
     .nav__logo{
        
-        align-self: start;
-      }
+      align-self: start;
+    }
       
-    .nav{
-    
-      
+    /* О нас */
+    .about__text{
+      font-size: 1.5rem;
     }
 }
