@@ -339,11 +339,6 @@ align-self: start;
   }
   
   /* о нас */
-  /* .about__text{
-    margin-inline: 30px;
-    font-weight: bolder;
-    background-color: var(--second-body-color);
-  } */
   .aboutus{
     background-color: var(--second-body-color);
     max-width: 100rem;
