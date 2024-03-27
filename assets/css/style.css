@@ -313,12 +313,51 @@ align-self: start;
       align-self: start;
   }
   
-
-  .about__text{
+  /* о нас */
+  /* .about__text{
     margin-inline: 30px;
     font-weight: bolder;
     background-color: var(--second-body-color);
+  } */
+  .aboutus{
+    background-color: var(--second-body-color);
+    max-width: 100rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
   }
+
+  .about__parentdiv{
+    background-color: var(--second-body-color);
+    display: flex;
+    max-width: 100rem;
+    max-height: 100rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about__div{
+    margin-inline: 20px;
+    padding-bottom: 10px;
+    
+  }
+  
+  .about__img{
+    size: 1%;
+  }
+  
+  .about__text{
+    max-width: 40rem;
+    font-weight: bolder;
+    font-size: 1rem;
+  }
+
+  .about__vases{
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
     
 }
 
@@ -345,36 +384,7 @@ align-self: start;
     }
       
     /* О нас */
-    .aboutus{
-      background-color: var(--second-body-color);
-      max-width: 100rem;
-      margin-left: auto;
-      margin-right: auto;
-      border-radius: 30px;
-    }
-
-    .about__parentdiv{
-      background-color: var(--second-body-color);
-      display: flex;
-      max-width: 100rem;
-      max-height: 100rem;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .about__div{
-      margin-inline: 20px;
-      padding-bottom: 10px;
-      
-    }
-    
-    .about__img{
-      size: 1%;
-    }
-    
     .about__text{
-      max-width: 40rem;
-      font-weight: bolder;
+      font-size: 1.5rem;
     }
-    
 }
