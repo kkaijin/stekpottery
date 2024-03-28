@@ -173,8 +173,45 @@ align-self: start;
 
 }
 /* О нас */
+
 .aboutus{
+  background-color: var(--second-body-color);
   margin-top: 10%;
+}
+.about__div{
+  margin-inline: 20px;
+  padding-bottom: 10px;
+}
+
+.about__img{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about__text{
+  margin-inline: 20px;
+  font-weight: bolder;
+  background-color: var(--second-body-color);
+  margin-top: 1%;
+  text-align: justify;
+  font-size: 0.7rem;
+}
+.title_text{
+  font-size: 64px;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.about__img{
+  width: 60%;
+}
+
+.about__vases{
+  width: 30%;
+  margin-right: 50px;
+  margin-left: auto;
 }
 /* reviews */
 
@@ -182,6 +219,11 @@ align-self: start;
     margin-top: 10%;
   }
 
+  .reviews__div{
+    height: 200px;
+    background-color: #60B9CE;
+    border-bottom-right-radius: 250px 100px;
+  }
 /*Слайдер работ учеников */
 .swiper{
   margin-inline: initial;
@@ -289,42 +331,12 @@ align-self: start;
   }
 
   /* О нас */
-  .aboutus{
-    background-color: var(--second-body-color);
-  }
-  .about__div{
-    margin-inline: 20px;
-    padding-bottom: 10px;
-  }
   
-  .about__img{
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .about__text{
-    margin-inline: 20px;
-    font-weight: bolder;
-    background-color: var(--second-body-color);
-  }
-  .title_text{
-    font-size: 64px;
-    color: white;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    
-    
-  }
 }
 
 /*начиная от 1023пкс*/
 @media screen and (min-width: 1023px){
 
-  .home__images{
-      display: flex;
-  }
   .nav__list{
         flex-direction: row;
         column-gap: 5rem;
@@ -357,16 +369,13 @@ align-self: start;
     max-height: 100rem;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 30px;
   }
 
   .about__div{
     margin-inline: 20px;
     padding-bottom: 10px;
     
-  }
-  
-  .about__img{
-    size: 1%;
   }
   
   .about__text{
@@ -379,9 +388,12 @@ align-self: start;
     margin-top: 10%;
     margin-left: auto;
     margin-right: auto;
+    width: 50%;
+  }
+  .about__img{
+    width: 70%;
   }
 
-    
 }
 
 /*начиная от 1700пкс*/
@@ -409,5 +421,13 @@ align-self: start;
     /* О нас */
     .about__text{
       font-size: 1.5rem;
+    }
+
+    .about__img{
+      width: 70%;
+    }
+
+    .about__vases{
+      width: 50%;
     }
 }
